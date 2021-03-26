@@ -1,0 +1,9 @@
+num = int(input('What is your number ? '))
+num = num + 1
+ans=''
+for d in range ( 2,num):
+    if num % d == 0:
+        ans = 'not prime'
+        break
+if ans == '' :
+    ans = 'prime'

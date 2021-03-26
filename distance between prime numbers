@@ -1,0 +1,24 @@
+sn = int (input('What is your start number ? '))
+en = int (input('What is your end number ? '))
+ppn = 0
+sumdif = 0
+firstnum = 0
+n= 0
+for d in range (sn ,en+1):
+    ans = ''
+    for i in range(2,d):
+        if d % i  == 0:
+            ans= 'not prime'
+            break
+    if ans == '':
+        ans = 'prime'
+        n = n + 1
+        dif = d - ppn
+        if ppn == 0 :
+            firstnum = d
+        sumdif = sumdif + dif
+        ppn = d
+sumdif = sumdif - firstnum
+n = n-1
+print (sumdif / n)
+
